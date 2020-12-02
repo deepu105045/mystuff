@@ -10,18 +10,18 @@ input {
   }
 
 .login-form{
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .heading{
-    display: block;
+    /* display: block;
     margin: 0;
-    margin-top: 5rem;
+    margin-top: 2rem;
     font-size: 1.17647rem;
     font-weight: 600;
-    letter-spacing: -.2px;
+    letter-spacing: -.2px; */
     text-align: center;
-    line-height: 1.35294rem;
+    /* line-height: 1.35294rem; */
 }
 
 .sub-heading{
