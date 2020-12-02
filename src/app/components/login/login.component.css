@@ -1,0 +1,60 @@
+
+
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+  }
+  input:focus {
+    outline:none;
+    border-color: green; 
+  }
+
+.login-form{
+    margin-top: 3rem;
+}
+
+.heading{
+    display: block;
+    margin: 0;
+    margin-top: 5rem;
+    font-size: 1.17647rem;
+    font-weight: 600;
+    letter-spacing: -.2px;
+    text-align: center;
+    line-height: 1.35294rem;
+}
+
+.sub-heading{
+    display: block;
+    padding: 0;
+    margin-top: .35294rem;
+    font-size: .82353rem;
+    letter-spacing: -.3px;
+    line-height: 1rem;
+    text-align: center;
+}
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    width: 43rem;
+  }
+  
+  .flex-container > div {
+    width: 5rem;
+    margin: 1px;
+    text-align: center;
+
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
