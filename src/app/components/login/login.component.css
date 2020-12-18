@@ -14,14 +14,8 @@ input {
 }
 
 .heading{
-    /* display: block;
-    margin: 0;
-    margin-top: 2rem;
-    font-size: 1.17647rem;
-    font-weight: 600;
-    letter-spacing: -.2px; */
+
     text-align: center;
-    /* line-height: 1.35294rem; */
 }
 
 .sub-heading{
@@ -30,7 +24,6 @@ input {
     margin-top: .35294rem;
     font-size: .82353rem;
     letter-spacing: -.3px;
-    line-height: 1rem;
     text-align: center;
 }
   

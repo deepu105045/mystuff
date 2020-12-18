@@ -10,6 +10,11 @@ import { AngularMaterialModule } from 'src/modules/angular-material/angular-mate
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './auth.guard';
+import { AngularFireModule } from '@angular/fire'
+import { FirebaseService } from './components/services/firebase/firebase.service';
+import { SigninComponent } from './components/signin/signin.component';
+
 
 @NgModule({
   declarations: [
@@ -17,17 +22,29 @@ import { LoginComponent } from './components/login/login.component';
     HeaderComponent,
     DashboardComponent,
     KitchenComponent,
-    LoginComponent
+    LoginComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AngularMaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyBBPLkfO6cibqcxoMUvaLqBHwVi6RJb0Pk",
+      authDomain: "mystuff-105045.firebaseapp.com",
+      projectId: "mystuff-105045",
+      storageBucket: "mystuff-105045.appspot.com",
+      messagingSenderId: "1065774327395",
+      appId: "1:1065774327395:web:ab68f565b87ec5d7767a56",
+      measurementId: "G-VYSTYTJCZ1"
+    }
+
+    )
 
   ],
-  providers: [],
+  providers: [AuthGuard, FirebaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

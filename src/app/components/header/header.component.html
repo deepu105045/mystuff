@@ -8,22 +8,20 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav">-
-        <a href="#" class="nav-item nav-link active">Home</a>
-        <a href="#" class="nav-item nav-link ">Profile</a>
+      <div class="navbar-nav">
+        <a href="#" class="nav-item nav-link active" >Home</a>
+        <a href="#" class="nav-item nav-link " *ngIf="!isLoggedIn()">Profile</a>
         <a href="#" class="nav-item nav-link ">Messages</a>
         <a href="#" class="nav-item nav-link ">About</a>
       </div>
 
       <div class="navbar-nav ml-auto">
-        <a href="#" class="nav-item nav-link">Login</a>
-        <a href="#" class="nav-item nav-link">Sign in</a>
+        <!-- <p>{{(_firebaseService.user$ |async)?.email}} </p> -->
 
+        <a (click)= "goToLoginPage()" class="nav-item nav-link" *ngIf="!isLoggedIn()">Login</a>
+        <a routerLink="/signin" class="nav-item nav-link" *ngIf="!isLoggedIn()">Sign in</a>
+        <a (click)="logout()" class="nav-item nav-link" *ngIf="isLoggedIn()">Logout</a>
       </div>
-  
-
     </div>
-
   </nav>
-
 </div>

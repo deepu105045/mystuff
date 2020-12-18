@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { debounceTime } from  'rxjs/operators'
+import { Constants } from 'src/app/constant';
+import { FirebaseService } from '../services/firebase/firebase.service';
 
 @Component({
   selector: 'app-login',
@@ -12,15 +15,26 @@ export class LoginComponent implements OnInit {
   errorMessage: string;
   passwordMessage: string;
   usernameMessage: string;
+  loginFailed = false;
+  loginErrorMessage = null;
 
   private validationMessage = {
     required: 'This field is required.',
     minlength: 'Minimum length 2 characters'
   };
 
-  constructor(private _fb: FormBuilder) { }
+  constructor(private _fb: FormBuilder,private _router:Router, private _firebaseService: FirebaseService) { 
+  
+  }
 
   ngOnInit(): void {
+
+    if(localStorage.getItem(Constants.loggedinUser)){
+      this._router.navigate(['dashboard'])
+
+    }
+
+
     this.loginform = this._fb.group({
       username:['',[Validators.required, Validators.minLength(2)]],
       password:['',Validators.required]
@@ -55,10 +69,12 @@ export class LoginComponent implements OnInit {
   onSubmit():void{
     const username = this.loginform.controls.username.value;
     const password = this.loginform.controls.password.value;
-    if(username === 'test' && password === 'test'){
-      console.log("Logged in ")
-    }
+    this._firebaseService.login(username,password).then(usr =>{
+      this._router.navigate(['dashboard'])
+    }).catch(error =>{
+      this.loginFailed = true;
+      this.loginErrorMessage = "Invalid Username or password. Please try again";
+    })
 
   }
-
 }

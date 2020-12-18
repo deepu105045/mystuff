@@ -1,0 +1,14 @@
+input {
+    outline: 0;
+    border-width: 0 0 2px;
+  }
+  input:focus {
+    outline:none;
+    border-color: green; 
+  }
+
+  .top{
+    margin-top: 3rem;;
+  }
+
+
