@@ -1,0 +1,42 @@
+.bg {
+    background-image: url('/assets/images/savaal/question.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+    height:100vh; 
+    background-position: center;
+
+  }
+
+  .flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10rem;
+}
+ .event-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+}
+  
+  .main {
+    font-size: 8vw;
+    font-family: "Audiowide", sans-serif;
+    padding-top: 8rem;
+
+  }
+
+  .event{
+    width: 25rem;
+    font-family: "Audiowide", sans-serif;
+
+  }
+  .event-text{
+      width: 3rem;
+      font-size: 1.5vw;
+      font-family: "Audiowide", sans-serif;
+      padding-left: 2rem;
+
+  }

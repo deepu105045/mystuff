@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="row" *ngIf="!!eventdata">
+        <div class="col jumbotron">
+            <h1> {{eventdata.eventDetails}} <span class="badge badge-secondary">{{eventdata.status}} </span></h1>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-11">
+            <textarea [(ngModel)]="question" name="question" class="form-control" rows="3"
+                placeholder="Ask your questions here ..."></textarea>
+        </div>
+
+        <button type="button" class="btn btn-success" (click)="postQuestion()"> Post</button>
+    </div>
+
+    <br>
+
+
+    <div *ngFor="let data of allQuestions; odd as isOdd; even as isEven"  [class.alert-success]="isOdd"  [class.alert-warning]="isEven">
+        <div class="alert " role="alert">
+            <div class="d-flex bd-highlight">
+                <div class="p-2 flex-grow-1 bd-highlight"><strong>Anonymous asked:</strong></div>
+                <div class="p-2 bd-highlight"><i (click)="upvote(data)" class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"> </i> {{data.likes}}</div>
+            </div>
+            {{data.question}}
+        </div>
+    </div>
+</div>

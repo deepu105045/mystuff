@@ -1,0 +1,13 @@
+
+textarea {
+    outline: 0;
+    border-width: 2px 2px 2px;
+  }
+  textarea:focus {
+    outline:none;
+    border-color: green; 
+  }
+
+  .top{
+    margin-top: 1rem;
+  }

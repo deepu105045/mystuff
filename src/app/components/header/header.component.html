@@ -1,27 +1,25 @@
 
 
-<div>
-  <nav class="navbar navbar-expand-md navbar-light">
-    <a href="#" class="navbar-brand">My Stuff</a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+ <nav class="header navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand mystuff-logo" href="#">MyStuff.com</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/savaal">Savaal</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" (click)= "goToLoginPage()">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signin">Signup</a>
+        </li>
 
-    <div class="collapse navbar-collapse" id="navbarCollapse">
-      <div class="navbar-nav">
-        <a href="#" class="nav-item nav-link active" >Home</a>
-        <a href="#" class="nav-item nav-link " *ngIf="!isLoggedIn()">Profile</a>
-        <a href="#" class="nav-item nav-link ">Messages</a>
-        <a href="#" class="nav-item nav-link ">About</a>
-      </div>
-
-      <div class="navbar-nav ml-auto">
-        <!-- <p>{{(_firebaseService.user$ |async)?.email}} </p> -->
-
-        <a (click)= "goToLoginPage()" class="nav-item nav-link" *ngIf="!isLoggedIn()">Login</a>
-        <a routerLink="/signin" class="nav-item nav-link" *ngIf="!isLoggedIn()">Sign in</a>
-        <a (click)="logout()" class="nav-item nav-link" *ngIf="isLoggedIn()">Logout</a>
-      </div>
+      </ul>
     </div>
-  </nav>
-</div>
+  </div>
+</nav>
+

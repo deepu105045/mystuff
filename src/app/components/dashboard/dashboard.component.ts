@@ -17,4 +17,9 @@ export class DashboardComponent implements OnInit {
     this._router.navigate(['kitchen']);
   }
 
+  goToSavaal(){
+    this._router.navigate(['savaal']);
+
+  }
+
 }

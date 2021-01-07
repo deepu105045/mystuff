@@ -1,3 +1,5 @@
 export const Constants = {
-    loggedinUser : 'user'
+    loggedinUser : 'user',
+    SCHEDULED :'Scheduled'
+
 }

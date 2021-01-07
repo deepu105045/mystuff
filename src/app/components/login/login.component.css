@@ -51,3 +51,7 @@ input {
     width: 100%;
     text-align: center;
   }
+
+  .top{
+    padding-top: 8rem;
+  }
