@@ -1,5 +1,5 @@
 .bg {
-    background-image: url('/assets/images/savaal/question.jpg');
+    background-image: url('/assets/images/savaal/question1.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;  
     background-size: cover;
@@ -7,36 +7,42 @@
     background-position: center;
 
   }
-
   .flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10rem;
+    flex-direction: column;
+    /* background-color:lightslategray; */
 }
- .event-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5rem;
+
+.parent-height{
+    height: 70%;
+
 }
-  
+
+.quote{
+    align-self: center;
+    padding-top: 03%;
+}
+
   .main {
-    font-size: 8vw;
+    font-size: 3.25rem;
     font-family: "Audiowide", sans-serif;
     padding-top: 8rem;
 
   }
-
   .event{
-    width: 25rem;
-    font-family: "Audiowide", sans-serif;
-
+      padding-top: 5rem;
+      align-self: center;
   }
-  .event-text{
-      width: 3rem;
-      font-size: 1.5vw;
-      font-family: "Audiowide", sans-serif;
-      padding-left: 2rem;
 
-  }
+ 
+
+.join-contianer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+}
+  
+
